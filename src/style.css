@@ -1,0 +1,188 @@
+/* 🎨 Better Background */
+body {
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  transition: background 0.5s ease-in-out;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px; /* Prevents content from touching screen edges */
+}
+
+/* Dark mode when bunking is NOT possible */
+.dark-theme {
+  background: linear-gradient(135deg, #000000, #222222) !important;
+}
+
+/* 📦 Centering the box */
+.attendance-box {
+  background: rgba(255, 255, 255, 0.15);
+  padding: 35px;
+  border-radius: 15px;
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
+  text-align: center;
+  width: 420px;
+  max-width: 100%; /* Ensures it fits on smaller screens */
+  transition: all 0.3s ease-in-out;
+}
+
+/* ✏️ Improved Input Styling */
+.form-control {
+  border-radius: 8px;
+  padding: 12px;
+  border: 2px solid transparent;
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  transition: 0.3s;
+  margin-bottom: 10px;
+  width: 100%;
+}
+.form-label {
+  display: block;
+  color: #ffcc00;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* Highlight Input on Focus */
+.form-control:focus {
+  border-color: #ffcc00;
+  outline: none;
+  background: rgba(255, 255, 255, 0.3);
+}
+
+/* 💛 Button Styling */
+.attendance-btn {
+  background: linear-gradient(45deg, #ffcc00, #ff9900);
+  color: black;
+  font-weight: bold;
+  border-radius: 10px;
+  padding: 12px;
+  font-size: 18px;
+  transition: all 0.3s;
+  box-shadow: 0px 4px 15px rgba(255, 204, 0, 0.4);
+  border: none;
+  width: 100%;
+}
+
+.attendance-btn:hover {
+  box-shadow: 0px 4px 20px rgba(255, 204, 0, 0.7);
+  transform: scale(1.05);
+}
+
+/* 📢 Popup Message */
+.popup {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.85);
+  color: white;
+  padding: 15px;
+  border-radius: 10px;
+  font-size: 18px;
+  text-align: center;
+  box-shadow: 0px 10px 30px rgba(255, 255, 255, 0.2);
+  opacity: 0;
+  animation: fadeIn 0.5s forwards;
+}
+
+/* 💀 Skull Animation */
+.skull-animation {
+  font-size: 50px;
+  animation: shake 0.5s infinite alternate;
+}
+
+/* ✨ Animations */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateX(-50%) translateY(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+}
+
+@keyframes shake {
+  0% {
+    transform: rotate(-5deg);
+  }
+  100% {
+    transform: rotate(5deg);
+  }
+}
+
+/* 📱 Responsive Design */
+@media (max-width: 480px) {
+  body {
+    padding: 10px; /* Ensures spacing on small screens */
+    align-items: flex-start; /* Prevents layout breaking */
+    justify-content: center;
+  }
+
+  .attendance-box {
+    padding: 25px;
+    width: 90%; /* Uses most of the screen width */
+  }
+
+  .form-control,
+  .attendance-btn {
+    font-size: 16px;
+    padding: 10px;
+  }
+
+  .popup {
+    font-size: 16px;
+    padding: 10px;
+    width: 90%;
+  }
+
+  .skull-animation {
+    font-size: 40px;
+  }
+}
+/* 🎨 Background */
+body {
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  transition: background 0.5s ease-in-out;
+  min-height: 100vh; /* Ensures full-screen coverage */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  margin: 0; /* Removes default margin */
+}
+
+/* 📦 Centering the box */
+.attendance-box {
+  background: rgba(255, 255, 255, 0.15);
+  padding: 35px;
+  border-radius: 15px;
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
+  text-align: center;
+  width: 420px;
+  max-width: 90%; /* Ensures it fits smaller screens */
+  transition: all 0.3s ease-in-out;
+}
+
+/* 📱 Mobile Fix */
+@media (max-width: 480px) {
+  body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .attendance-box {
+    padding: 25px;
+    width: 90%;
+    max-width: 380px;
+  }
+}
